@@ -1,12 +1,15 @@
 <?php
 
-namespace Laravel\Envoy;
+namespace Laravel\Envoy\Tests;
+
+use Laravel\Envoy\Compiler;
+use PHPUnit\Framework\TestCase;
 
 class CompilerTest extends TestCase
 {
     public function test_it_compiles_finished_statement()
     {
-        $str = <<<EOL
+        $str = <<<'EOL'
 @finished
     echo 'shutdown';
 @endfinished
